@@ -14,7 +14,13 @@ public class soucet
         for (int i = cislo; i > 0; i--)
         {
             soucet += i;
-            System.out.print(i + " ");
+            if (i <= 1)
+            {
+                System.out.print(i);
+            } else
+            {
+                System.out.print(i + " + ");
+            }
         }
         System.out.println("\nSoucet: " + soucet);
     }
