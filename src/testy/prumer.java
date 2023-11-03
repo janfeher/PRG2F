@@ -8,7 +8,7 @@ public class prumer
     {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Prumery z cisel:");
+        System.out.print("\nPrumery z cisel:\n");
         int cislo = sc.nextInt();
         double soucet = 0;
         int pocet = 0;

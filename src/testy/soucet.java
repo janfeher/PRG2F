@@ -6,6 +6,7 @@ public class soucet
 {
     public static void main(String[] args)
     {
+        System.out.print("\nNapis cislo k secteni: ");
         Scanner sc = new Scanner(System.in);
 
         int cislo = sc.nextInt();
