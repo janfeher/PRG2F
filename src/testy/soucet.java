@@ -17,7 +17,8 @@ public class soucet
             if (i == 1)
             {
                 System.out.print(i);
-            } else
+            }
+            else
             {
                 System.out.print(i + " + ");
             }
