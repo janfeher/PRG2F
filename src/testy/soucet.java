@@ -14,7 +14,7 @@ public class soucet
         for (int i = cislo; i > 0; i--)
         {
             soucet += i;
-            if (i <= 1)
+            if (i == 1)
             {
                 System.out.print(i);
             } else
