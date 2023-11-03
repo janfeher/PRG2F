@@ -11,8 +11,15 @@ public class tickety
         while(hodnota < 1000)
         {
             ticket = (int)(Math.random() * 100 + 1);
-            System.out.print(ticket + " ");
             hodnota += ticket;
+            if(hodnota < 1000)
+            {
+                System.out.print(ticket + ", ");
+            }
+            else
+            {
+                System.out.print(ticket);
+            }
             pocet++;
         }
         System.out.println("\nBylo potreba " + pocet + " ticketu");
