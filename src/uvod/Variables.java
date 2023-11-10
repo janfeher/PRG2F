@@ -18,5 +18,10 @@ public class Variables {
         System.out.println("Zadej cislo:");
         int readNumber = sc.nextInt();
         System.out.println("Zadal jsi: " + readNumber);
+
+
+
+
+        Math.pow(2, 5);
     }
 }
