@@ -1,38 +1,59 @@
 package random;
 
-import java.util.Arrays;
-
 public class Maze
 {
     public static void main(String[] args)
     {
-        int[][] matrix = new int[7][7];
+        String[][] matrix = new String[7][7];
 
-        for (int i = 0; i < matrix.length; i++)
+        for (int y = 0; y < matrix.length; y++)
         {
-            for (int j = 0; j < matrix[i].length; j++)
+            for (int x = 0; x < matrix[y].length; x++)
             {
-                matrix[0][j] = 1;
-                matrix[6][j] = 1;
+                matrix[y][x] = "0";
+            }
+        }
 
-                matrix[i][0] = 1;
-                matrix[i][6] = 1;
+        for (int y = 0; y < matrix.length; y++)
+        {
+            for (int x = 0; x < matrix[y].length; x++)
+            {
+                matrix[0][x] = "/";
+                matrix[6][x] = "/";
 
-                matrix[0][4] = 0;
+                matrix[y][0] = "/";
+                matrix[y][6] = "/";
 
-                System.out.print(matrix[i][j] + " ");
+                matrix[0][4] = "-";
+                matrix[6][3] = "-";
+
+                System.out.print(matrix[y][x] + " ");
+            }
+
+            System.out.println();
+        }
+
+        System.out.println();
+
+        for (int y = 1; y < matrix.length - 1; y++)
+        {
+            for (int x = 1; x < matrix[y].length - 1; x++)
+            {
+                matrix[y][x] = String.valueOf((int) (Math.random() * 2));
+                System.out.print(matrix[y][x] + " ");
             }
             System.out.println();
         }
 
-//        for (int y_axis = 0; y_axis < matrix.length; y_axis++)
-//        {
-//            for (int x_axis = 0; x_axis < matrix[y_axis].length; x_axis++)
-//            {
-//                matrix[y_axis][x_axis] = (int) (Math.random() * 2);
-//                System.out.print(y_axis + " ");
-//            }
-//            System.out.println();
-//        }
+        System.out.println();
+
+        for (int y = 0; y < matrix.length; y++)
+        {
+            for (int x = 0; x < matrix[y].length; x++)
+            {
+                System.out.print(matrix[y][x] + " ");
+            }
+            System.out.println();
+        }
     }
 }
