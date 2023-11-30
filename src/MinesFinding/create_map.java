@@ -13,5 +13,6 @@ public class create_map extends main
             }
             System.out.println();
         }
+        System.out.println();
     }
 }
