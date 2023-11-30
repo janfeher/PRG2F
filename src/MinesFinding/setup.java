@@ -1,6 +1,6 @@
 package MinesFinding;
 
-public class main
+public class setup
 {
     public static int[][] map = new int[10][10];
 

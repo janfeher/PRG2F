@@ -1,6 +1,6 @@
 package MinesFinding;
 
-public class add_mines extends main
+public class add_mines extends setup
 {
     public static void mines()
     {

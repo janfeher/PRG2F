@@ -1,6 +1,6 @@
 package MinesFinding;
 
-public class create_map extends main
+public class create_map extends setup
 {
     public static void map()
     {
