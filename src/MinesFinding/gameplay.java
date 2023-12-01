@@ -4,12 +4,12 @@ import java.util.Scanner;
 
 public class gameplay extends setup
 {
+    public static Scanner sc = new Scanner(System.in);
+    public static int x;
+    public static int y;
+
     public static void controls()
     {
-        Scanner sc = new Scanner(System.in);
-
-        int x;
-        int y;
         System.out.print("Enter position X: ");
         x = sc.nextInt();
         System.out.print("Enter position Y: ");
@@ -34,5 +34,6 @@ public class gameplay extends setup
     public static void flag()
     {
         System.out.println("You entered flag mode");
+
     }
 }

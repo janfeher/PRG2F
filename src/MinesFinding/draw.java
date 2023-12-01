@@ -2,7 +2,9 @@ package MinesFinding;
 
 public class draw extends setup
 {
-    public static void draw()
+    public static int mines_counter;
+
+    public static void update()
     {
         mines_counter = 0;
         //

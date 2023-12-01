@@ -3,7 +3,6 @@ package MinesFinding;
 public class setup
 {
     public static int[][] map = new int[10][10];
-    public static int mines_counter = 0;
 
     public static void main(String[] args)
     {
@@ -12,7 +11,7 @@ public class setup
         //
         create_map.map();
 
-        draw.draw();
+        draw.update();
 
         //
         // control the movement
@@ -22,6 +21,6 @@ public class setup
         //
         // draw the map
         //
-        draw.draw();
+        draw.update();
     }
 }
