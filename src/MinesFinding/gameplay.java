@@ -35,5 +35,11 @@ public class gameplay extends setup
     {
         System.out.println("You entered flag mode");
 
+        System.out.println("Enter coordinates to flag:");
+        System.out.print("X: ");
+        x = sc.nextInt();
+        System.out.print("Y: ");
+        y = sc.nextInt();
+        map[y - 1][x - 1] = 4;
     }
 }

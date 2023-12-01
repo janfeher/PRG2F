@@ -21,6 +21,9 @@ public class draw extends setup
                 } else if (map[y][x] == 8)
                 {
                     System.out.print("\u001b[42m" + map[y][x] + "\u001b[0m  ");
+                } else if (map[y][x] == 4)
+                {
+                    System.out.print("\u001b[44m" + map[y][x] + "\u001b[0m  ");
                 } else
                 {
                     System.out.print("\u001b[90m" + map[y][x] + "\u001b[0m  ");
