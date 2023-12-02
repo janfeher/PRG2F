@@ -10,6 +10,8 @@ public class draw extends setup
         //
         // output the finished map
         //
+        System. out. print("\033[H\033[2J");
+        System. out. flush();
         for (int y = 0; y < map.length; y++)
         {
             for (int x = 0; x < map[y].length; x++)
@@ -31,6 +33,11 @@ public class draw extends setup
             }
             System.out.println();
         }
-        System.out.println("Mines: " + mines_counter);
+        System.out.println("Mines: " + mines_counter + "\nFlags: " + gameplay.flag);
+
+        if (gameplay.hit == false && gameplay.is_flagged == false)
+        {
+            gameplay.controls();
+        }
     }
 }

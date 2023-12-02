@@ -7,6 +7,8 @@ public class create_map extends setup
         //
         // create blank map
         //
+        System. out. print("\033[H\033[2J");
+        System. out. flush();
         for (int y = 0; y < map.length; y++)
         {
             for (int x = 0; x < map[y].length; x++)

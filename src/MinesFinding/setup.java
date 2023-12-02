@@ -17,10 +17,5 @@ public class setup
         // control the movement
         //
         gameplay.controls();
-
-        //
-        // draw the map
-        //
-        draw.update();
     }
 }
