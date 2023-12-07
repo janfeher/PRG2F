@@ -14,5 +14,6 @@ public class Separating {
 
         String hello = "hello";
         String something = hello.substring(0, 4);
+        System.out.println(something);
     }
 }
