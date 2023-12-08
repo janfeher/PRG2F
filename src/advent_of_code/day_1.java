@@ -2,11 +2,12 @@ package advent_of_code;
 
 public class day_1 {
     public static void main(String[] args) {
-        char[] number = "2xjzgsjzfhzhm1".toCharArray();
+        String chars = "2xjzgsjzfhzhm1";
         for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < number.length; j++) {
-                if (number[j] == i) {
-                    System.err.println(number[j]);
+            for (int j = 0; j < chars.length(); j++) {
+                String number = String.valueOf(i);
+                if (String.valueOf(i).equals(chars.charAt(j))) {
+                    System.err.println(chars.charAt(j));
                 }
             }
         }
