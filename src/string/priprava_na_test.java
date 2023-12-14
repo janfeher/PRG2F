@@ -75,7 +75,7 @@ public class priprava_na_test {
 //
 //        for (int i = 0; i < jmena.length; i++) {
 //        }
-//    }
+//    }s
 
     private static void cislo() {
         String number = "4200";
