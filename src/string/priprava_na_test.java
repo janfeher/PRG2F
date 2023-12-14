@@ -7,19 +7,19 @@ public class priprava_na_test {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         String[] users = {"Jan", "Karel", "Eva", "Frantisek"};
-        String userName = "";
+        String userName;
 
         outer:
         while (true) {
             userName = input.nextLine();
 
             for (int i = 0; i < users.length; i++) {
-                if (userName.toLowerCase().equals(users[i].toLowerCase())) {
+                if (userName.equalsIgnoreCase(users[i])) {
                     System.out.println(userName + " se shoduje s indexem " + i + " (" + users[i] + ")");
-                } else if (!userName.equals("-1")) {
-                    System.out.println(userName + " se neshoduje");
                     break;
-                } else {
+                } else if (i == users.length - 1) {
+                    System.out.println(userName + " se neshoduje");
+                } else if (userName.equals("-1")) {
                     System.out.println("Konec");
                     break outer;
                 }

@@ -1,6 +1,7 @@
 package string;
 
 import java.lang.String;
+import java.util.Arrays;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -9,17 +10,15 @@ public class similar_strings {
         Scanner sc = new Scanner(System.in);
         String names = "Jan;Karel;Eva;Franta";
         String[] parts = names.split(";");
+        int[] queue = new
+        char[] chars = new char[];
 
         String[] input;
 
         while (true) {
             input = sc.nextLine().split("");
             for (int i = 0; i < parts.length; i++) {
-                System.out.println(parts[i]);
-//                for (int j = 0; j < input.length; j++) {
-//                    System.out.println(parts[j]);
-//                }
-//                System.out.println();
+                chars[i] = parts[i].toCharArray();
             }
         }
     }
