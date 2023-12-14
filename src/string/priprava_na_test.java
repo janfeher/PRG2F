@@ -35,7 +35,6 @@ public class priprava_na_test {
     private static void zdvojena_pismena() {
         String[] text = {"Velikonoce", "Halloween"};
 
-        outer:
         for (int i = 0; i < text.length; i++) {
             char[] pismena = text[i].toCharArray();
             for (int j = 0; j < pismena.length - 1; j++) {
