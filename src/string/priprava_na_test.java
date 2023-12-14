@@ -1,8 +1,6 @@
 package string;
 
-import java.io.FilterOutputStream;
 import java.lang.String;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class priprava_na_test {
