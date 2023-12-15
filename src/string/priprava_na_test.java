@@ -1,13 +1,15 @@
 package string;
 
 import java.lang.String;
+import java.util.Arrays;
+import java.util.IllegalFormatCodePointException;
 import java.util.Scanner;
 
 public class priprava_na_test {
     public static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        typ_souboru();
+        names_db();
     }
 
     private static void username_db() {
@@ -67,12 +69,18 @@ public class priprava_na_test {
         System.out.println("Pocet slov: " + words.length);
     }
 
-//    private static void names_db() {
-//        String[] jmena = {"Jan", "Karel", "František Dlouhojmenný", "Pablo Diego José Francisco de Paula Juan Nepomuceno María de los Remedios Cipriano de la Santisima Trinidad Ruiz y Picasso", "Eva"};
-//
-//        for (int i = 0; i < jmena.length; i++) {
-//        }
-//    }
+    private static void names_db() {
+        String[] jmena = {"Jan", "Karel", "František Dlouhojmenný", "Pablo Diego José Francisco de Paula Juan Nepomuceno María de los Remedios Cipriano de la Santisima Trinidad Ruiz y Picasso", "Eva"};
+        int poradi = 0;
+        
+        for (int i = 0; i < jmena.length - 1; i++) {
+            poradi = i;
+            if (jmena[i].length() < jmena[i + 1].length()) {
+                poradi = i + 1;
+            }
+        }
+        System.out.println(jmena[poradi]);
+    }
 
     private static void cislo() {
         String number = "4200";
