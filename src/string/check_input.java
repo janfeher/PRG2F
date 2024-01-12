@@ -12,12 +12,10 @@ public class check_input {
         System.out.println("Zadal jsi: " + adresa);
 
         String[] parts = adresa.split("\\.");
-        int i = 0;
-        int address_part = Integer.parseInt(parts[i]);
         outer:
-        for (i = 0; i < parts.length; i++) {
+        for (int i = 0; i < parts.length; i++) {
             System.out.println(parts[i]);
-            if (!(address_part >= 0 && address_part <= 256)) {
+            if (!(Integer.parseInt(parts[i]) >= 0 && Integer.parseInt(parts[i]) <= 256)) {
                 System.out.println("Address doesn't have right numbers");
                 break;
             }
