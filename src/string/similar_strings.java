@@ -2,7 +2,6 @@ package string;
 
 import java.lang.String;
 import java.util.Arrays;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class similar_strings {
