@@ -25,7 +25,7 @@ public class BinaryArrays
 
         for (int i = 0; i < binaryPozpatku.length; i++)
         {
-            vysledek += binaryPozpatku[i] * (int) Math.pow(2, i);
+            vysledek += (int) (binaryPozpatku[i] * Math.pow(2, i));
         }
         System.out.println("Decimální číslo: " + vysledek);
     }
