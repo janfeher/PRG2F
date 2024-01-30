@@ -12,7 +12,7 @@ public class binary_to_ip_address {
     public static void main(String[] args) throws IOException {
         // processing file
         //
-        File file = new File("/home/endeavour/Stažené/PRG2F/src/matrix/header.txt");
+        File file = new File("C:\\Users\\jan.feher\\Downloads\\header.txt");
         BufferedReader br = new BufferedReader(new FileReader(file));
         String st = br.readLine();
 
@@ -48,7 +48,7 @@ public class binary_to_ip_address {
                 System.out.println("Total length: " + lengthHex(st, length));
                 System.out.println("Time to live: " + timeToLiveHex(st));
                 System.out.println("Protocol: " + protocolHex(st));
-                System.out.println("Source IP: " + Arrays.toString(addressHex(st, 24)));
+                System.out.println("Source IP: " + Arrays.deepToString(addressHex(st, 24)));
                 System.out.println("Destination IP: ");
             } else if (st.charAt(0) == '6') {
                 System.out.println("Payload length: " + lengthHex(st, length6));
@@ -199,16 +199,15 @@ public class binary_to_ip_address {
         return hex;
     }
 
-    private static int[] addressHex(String st, int start) {
+    private static int[][] addressHex(String st, int start) {
         String[][] part = new String[4][2];
 
         splitAddressHex(st, start, part);
-        int[] decimal = new int[0];
+        int[][] decimal;
 
-//        decimal = stringToHex(st, part);
-//        for (int i = 0; i < part.length; i++) {
-//            decimal[i] = convertHex(part[i]);
-//        }
+        decimal = stringToHexPart(st, part);
+        for (int i = 0; i < part.length; i++) {
+        }
 
         return decimal;
     }
@@ -231,9 +230,7 @@ public class binary_to_ip_address {
             for (int j = 0; j < part[i].length; j++) {
                 part[i][j] = String.valueOf(st.charAt(counter));
                 counter++;
-                System.out.print(part[i][j]);
             }
-            System.out.println();
         }
     }
 
@@ -366,6 +363,67 @@ public class binary_to_ip_address {
                 default:
                     decimal[n] = 0;
                     break;
+            }
+        }
+
+        return decimal;
+    }
+
+    private static int[][] stringToHexPart(String st, String[][] part) {
+        int[][] decimal = new int[part.length][part[0].length];
+
+        for (int i = 0, n = 0; i < decimal.length; i++, n++) {
+            for (int j = 0; j < decimal[i].length; j++) {
+                switch (st.charAt(i)) {
+                    case '1':
+                        decimal[i][j] = 1;
+                        break;
+                    case '2':
+                        decimal[i][j] = 2;
+                        break;
+                    case '3':
+                        decimal[i][j] = 3;
+                        break;
+                    case '4':
+                        decimal[i][j] = 4;
+                        break;
+                    case '5':
+                        decimal[i][j] = 5;
+                        break;
+                    case '6':
+                        decimal[i][j] = 6;
+                        break;
+                    case '7':
+                        decimal[i][j] = 7;
+                        break;
+                    case '8':
+                        decimal[i][j] = 8;
+                        break;
+                    case '9':
+                        decimal[i][j] = 9;
+                        break;
+                    case 'a':
+                        decimal[i][j] = 10;
+                        break;
+                    case 'b':
+                        decimal[i][j] = 11;
+                        break;
+                    case 'c':
+                        decimal[i][j] = 12;
+                        break;
+                    case 'd':
+                        decimal[i][j] = 13;
+                        break;
+                    case 'e':
+                        decimal[i][j] = 14;
+                        break;
+                    case 'f':
+                        decimal[i][j] = 15;
+                        break;
+                    default:
+                        decimal[i][j] = 0;
+                        break;
+                }
             }
         }
 
