@@ -19,6 +19,33 @@ public class SubnetPrefix {
         return result;
     }
 
+    private static int[] bin_dec(int[] mask) {
+        int[][] reversed = new int[4][8];
+        int[] dec_mask = new int[4];
+        for (int i = 0, j = 0, k; i < 4; i++) {
+            for (k = 0; k < 8; k++, j++) {
+                reversed[i][k] = mask[j];
+            }
+        }
+        int count = 0;
+        outer:
+        for (int i = 0; i < reversed.length; i++) {
+            for (int j = 0; j < reversed[i].length; j++, count++) {
+                if (reversed[i][j] == 1) {
+                    break outer;
+                }
+            }
+        }
+        for (int i = 0; i < dec_mask.length; i++) {
+            for (int j = 0; j < count; j++) {
+                if (reversed[i][j] == 1) {
+                    dec_mask[i] += (int) Math.pow(2, j);
+                }
+            }
+        }
+        return dec_mask;
+    }
+
     private static int[] mask(int prefix) {
         int[] result = new int[32];
         Arrays.fill(result, 1);
@@ -79,9 +106,10 @@ public class SubnetPrefix {
             count = address_count(min);
             subnet_address[i][subnet_prefix[i] / 8] = address[i] + count;
         }
+        System.out.println(Arrays.toString(bin_dec(mask(prefix))));
 
         System.out.println("Number of possible addresses: " + address_count(prefix));
-        System.out.println("Number if subnets: " + subnet_count);
+        System.out.println("Number of subnets: " + subnet_count);
         System.out.println("Number of hosts in subnets: " + Arrays.toString(subnet_hosts_count));
         System.out.println("Prefixes of the hosts: " + Arrays.toString(subnet_prefix));
         System.out.println(Arrays.deepToString(subnet_address));
