@@ -55,6 +55,16 @@ public class methods {
         return seconds;
     }
 
+    private static double cost(int length, boolean lakovat) {
+        int count = length * 3;
+        double cost = count * 33;
+        if (lakovat) {
+            cost = cost * 1.23;
+        }
+
+        return cost;
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -64,5 +74,9 @@ public class methods {
 
         String[] times = {"1:30", "1:30"};
         System.out.println(timeValues(times));
+
+        int length = sc.nextInt();
+        boolean lakovat = true;
+        System.out.println(cost(length, lakovat));
     }
 }
