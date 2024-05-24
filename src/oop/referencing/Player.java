@@ -5,5 +5,8 @@ public class Player {
     int balance;
     int handValue;
 
-
+    Player(String name, int balance) {
+        this.name = name;
+        this.balance = balance;
+    }
 }
