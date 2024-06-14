@@ -1,11 +1,9 @@
-/*
 ////////////////////////
-AUTORS:
-
-Jan Fehér
-Adam Klíma
+// AUTORS:            //
+//                    //
+// Jan Fehér          //
+// Adam Klíma         //
 ////////////////////////
-*/
 
 double senzor = A0;
 double fotoOdpor = 1450;
